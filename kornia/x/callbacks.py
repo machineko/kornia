@@ -32,7 +32,7 @@ class EarlyStopping:
             monitor="top5", filepath="early_stop_model.pt"
         )
 
-        trainer = ImageClassifierTrainer(...,
+        trainer = ImageClassifierTrainer(
             callbacks={"on_checkpoint", early_stop}
         )
     """
